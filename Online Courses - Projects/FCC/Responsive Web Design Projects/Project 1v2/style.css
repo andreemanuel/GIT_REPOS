@@ -95,7 +95,6 @@ nav {
 	padding: 8px;
 	text-align: center;
 }
-
 .quote {
 	background-color: black;
 	order: 3;
@@ -153,10 +152,9 @@ blockquote {
 	width: 500px;
 }
 
+/* BOTTOM HALF OF PAGE*/
 
-
-
-
+/* IF CONTAINER IS FLEX 
 .pagebottom {
 	background-color: transparent;
 	width: 100%;
@@ -169,24 +167,37 @@ blockquote {
 	align-content: stretch;
 	justify-content: space-between;
 }
+*/
 
+/* IF CONTAINER IS GRID */
 
+.pagebottom {
+	background-color: lightyellow;
+	width: 100%;
+	order: 2;
+	flex: 1 1 50%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 15% 700px auto 50px;
+	justify-content: stretch;
+	align-content: stretch;
+}
 
+article.story {
+	background-color: lightseagreen;
 
+}
+.timelineblock {
+	background-color: lightgray;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 4fr;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+}
+#gallery {
+	background-color: transparent;
+}
 footer {
     width: 100%;
     background-color: lightgreen;
