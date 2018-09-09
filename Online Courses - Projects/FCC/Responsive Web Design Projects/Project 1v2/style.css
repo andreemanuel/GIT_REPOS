@@ -190,10 +190,32 @@ article.story {
 .timelineblock {
 	background-color: lightgray;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 4fr;
+	grid-template-areas: 
+		"head head head head"
+		"column column column column"
 
 	
+}
+.timeline-head {
+	grid-area: head;
+	background-color: lightsteelblue;
+}
+.timeline-column {
+	overflow: scroll;
+}
+#timeline1 {
+	background-color: lightgoldenrodyellow;
+}
+#timeline2 {
+	background-color: lightsalmon;
+}
+#timeline3 {
+	background-color: lightgreen;
+}
+#timeline4 {
+	background-color: lightpink;
 }
 #gallery {
 	background-color: transparent;
