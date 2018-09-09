@@ -30,7 +30,7 @@ body {
 	order: 1;
 	flex: 1 1 30%;
 	display: grid;
-	grid-template-columns: 4fr 3fr;
+	grid-template-columns: 3fr 2fr;
 	grid-template-rows: 10% auto;
 	grid-template-areas: 
 		"header header"
@@ -40,7 +40,7 @@ header {
 	background-color: lightblue;
 	grid-area: header;
 	text-align: center;
-	padding: 20px;
+	padding: 13px;
 }
 .portrait-block {
 	background-color: orangered;
@@ -75,7 +75,7 @@ aside {
 	background-color: darkslategray;
 	order: 1;
 	flex: 1 1 1%;
-	width: 500px;
+	width: 100%;
 	text-align: center;
 	padding: 10px;
 }
@@ -83,7 +83,7 @@ nav {
 	background-color: lightslategray;
 	order: 2;
 	flex: auto 1 1px;
-	width: 500px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -96,10 +96,10 @@ nav {
 	text-align: center;
 }
 .quote {
-	background-color: black;
+	background-color: lightgoldenrodyellow;
 	order: 3;
 	flex: 1 1 10%;
-	width: 500px;
+	width: 100%;
 }
 hr.style-one {
   border: 0;
@@ -143,13 +143,13 @@ blockquote {
 	background-color: lightcoral;
 	order: 4;
 	flex: 1 1 20%;
-	width: 500px;
+	width: 100%;
 }
 #achievements {
 	background-color: goldenrod;
 	order: 5;
 	flex: 1 1 60%;
-	width: 500px;
+	width: 100%;
 }
 
 /* BOTTOM HALF OF PAGE*/
