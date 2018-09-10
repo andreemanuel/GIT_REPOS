@@ -32,7 +32,7 @@ body {
 	flex: 1 1 30%;
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	grid-template-rows: 12% auto;
+	grid-template-rows: 13% auto;
 	grid-template-areas: 
 		"header header"
 		"portrait aside";		
@@ -68,13 +68,13 @@ aside {
 	grid-area: aside;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 }
 .sidebar-title {
-	background-color: lightgreen;
+	background-color: black;
 	order: 1;
-	flex: 1 1 1%;
+	flex: 0 1 1%;
 	width: 100%;
 	text-align: center;
 	padding: 20px;
@@ -82,22 +82,27 @@ aside {
 .sidebar-blocks {
 	width: 100%;
 	justify-self: stretch;
+	
 }
 nav {
-	background-color: lightslategray;
+	background-color: black;
+	padding-bottom: 50px;
 	order: 2;
 	flex: auto 1 1px;
-
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 }
 .navbutton {
 	background-color: darkslategray;
-	width: 110px;
-	height: 35px;
-	padding: 8px;
+	width: 120px;
+	height: 30px;
+	padding: 0px;
 	text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	
 }
 nav a {
@@ -105,9 +110,9 @@ nav a {
 	font-family: ;
 }
 .quote {
-	background-color: lightgoldenrodyellow;
+	background-color: black;
 	order: 3;
-	flex: 1 1 10%;
+	flex: 0 1 10%;
 }
 hr.style-one {
   border: 0;
@@ -148,18 +153,16 @@ blockquote {
 	padding: 30px 40px 20px 20px
 }
 #quick-facts {
-	background-color: lightcoral;
+	background-color: black;
 	order: 4;
-	flex: 1 1 30%;
-	
-	padding: 50px 20px;
+	flex: 0 1 30%;
+	padding: 50px 50px 20px 20px;
 }
 #achievements {
-	background-color: goldenrod;
+	background-color: black;
 	order: 5;
-	flex: 1 1 60%;
-	
-	padding: 50px 20px;
+	flex: 0 1 60%;
+	padding: 50px 50px 20px 20px;
 }
 
 /* BOTTOM HALF OF PAGE*/
@@ -182,13 +185,13 @@ blockquote {
 /* IF CONTAINER IS GRID */
 
 .pagebottom {
-	background-color: lightyellow;
+	background-color: lightgray;
 	width: 100%;
 	order: 2;
 	flex: 1 1 50%;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 15% 600px 3fr 1fr 40px;
+	grid-template-rows: 20% 600px 3fr 1fr 40px;
 	grid-template-areas: 
 		"story"
 		"timelineblock"
@@ -198,17 +201,22 @@ blockquote {
 	justify-content: stretch;
 	align-content: stretch;
 }
+.blockmargins {
+	padding: 20px;
+}
 
-article.story {
+#story {
 	background-color: lightseagreen;
 	grid-area: story;
+	text-align: justify;
+	padding: 50px 80px;
 }
 .timelineblock {
-	background-color: lightgray;
+	background-color: black;
 	grid-area: timelineblock;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 70px 4fr;
+	grid-template-rows: 60px 4fr;
 	grid-template-areas: 
 		"head head head head"
 		"column column column column";
@@ -218,7 +226,7 @@ article.story {
 }
 .timeline-head {
 	grid-area: head;
-	background-color: lightsteelblue;
+	background-color: black;
 }
 .timeline-column {
 	overflow: scroll;
@@ -226,6 +234,7 @@ article.story {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-content: center;
+	padding: 30px 17px;
 }
 #timeline1 {
 	background-color: lightgoldenrodyellow;
