@@ -1,0 +1,24 @@
+* {
+    font-family: "Nanum Gothic", sans-serif;
+}
+.center {
+    text-align: center;
+}
+
+#title {
+    font-family: "Poppins";
+    font-size: 72px;
+}
+
+.header {
+    font-family: "Poppins";
+}
+
+#imgdiv {
+    margin: 20px auto;
+    background-color: azure;
+
+}
+#image {
+    margin: 20px auto;
+}
