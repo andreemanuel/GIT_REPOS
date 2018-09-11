@@ -39,7 +39,7 @@ body {
 		"portrait aside";		
 }
 header {
-	background-color: black;
+	background-color: lightskyblue;
 	grid-area: header;
 	text-align: center;
 	padding: 13px;
@@ -87,7 +87,7 @@ nav a {
 	display: block;
 }
 .imgcaption {
-	background-color: black;
+	background-color: lightpink;
 	padding: 0px 0px;
 	width: 480px;
 	height: 255px;
@@ -104,7 +104,7 @@ aside {
 	align-items: flex-end;
 }
 .sidebar-title {
-	background-color: black;
+	background-color: lightgoldenrodyellow;
 	order: 1;
 	flex: 0 1 1%;
 	width: 100%;
@@ -116,7 +116,7 @@ aside {
 	justify-self: stretch;	
 }
 .quote {
-	background-color: black;
+	background-color: lightgreen;
 	order: 3;
 	flex: 0 1 10%;
 }
@@ -159,13 +159,13 @@ blockquote {
 	padding: 30px 40px 20px 20px
 }
 #quick-facts {
-	background-color: black;
+	background-color: lightsalmon;
 	order: 4;
 	flex: 0 1 30%;
 	padding: 50px 50px 20px 20px;
 }
 #achievements {
-	background-color: black;
+	background-color: lightyellow;
 	order: 5;
 	flex: 0 1 60%;
 	padding: 50px 50px 20px 20px;
