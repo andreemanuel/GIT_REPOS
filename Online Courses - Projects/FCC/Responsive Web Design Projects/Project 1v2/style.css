@@ -32,16 +32,45 @@ body {
 	flex: 1 1 30%;
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	grid-template-rows: 13% auto;
+	grid-template-rows: 10% 30px auto;
 	grid-template-areas: 
 		"header header"
+		"nav nav"
 		"portrait aside";		
 }
 header {
-	background-color: lightblue;
+	background-color: black;
 	grid-area: header;
 	text-align: center;
 	padding: 13px;
+}
+nav {
+	grid-area: nav;
+	width: 100%;
+	justify-self: stretch;
+	align-content: center;
+	background-color: gray;
+	order: 2;
+	flex: auto 1 1px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+.navbutton {
+	background-color: darkslategray;
+	width: 120px;
+	height: 30px;
+	padding: 0px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	
+}
+nav a {
+	color: slategray;
+	font-family: ;
 }
 .portrait-block {
 	background-color: orangered;
@@ -59,8 +88,11 @@ header {
 }
 .imgcaption {
 	background-color: black;
+	padding: 0px 0px;
 	width: 480px;
 	height: 255px;
+	display: flex;
+	flex-direction: column;
 }
 /*ASIDE*/
 aside {
@@ -68,8 +100,8 @@ aside {
 	grid-area: aside;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 .sidebar-title {
 	background-color: black;
@@ -81,33 +113,7 @@ aside {
 }
 .sidebar-blocks {
 	width: 100%;
-	justify-self: stretch;
-	
-}
-nav {
-	background-color: black;
-	padding-bottom: 50px;
-	order: 2;
-	flex: auto 1 1px;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
-.navbutton {
-	background-color: darkslategray;
-	width: 120px;
-	height: 30px;
-	padding: 0px;
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	
-}
-nav a {
-	color: slategray;
-	font-family: ;
+	justify-self: stretch;	
 }
 .quote {
 	background-color: black;
@@ -204,7 +210,9 @@ blockquote {
 .blockmargins {
 	padding: 20px;
 }
-
+article {
+	text-indent: 50px;
+}
 #story {
 	background-color: lightseagreen;
 	grid-area: story;
@@ -236,11 +244,15 @@ blockquote {
 	align-content: center;
 	padding: 30px 17px;
 }
+.timeline-column p {
+	text-indent: 30px;
+}
 #timeline1 {
 	background-color: lightgoldenrodyellow;
 }
 #timeline2 {
 	background-color: lightsalmon;
+	opacity: 0.7;
 }
 #timeline3 {
 	background-color: lightgreen;
