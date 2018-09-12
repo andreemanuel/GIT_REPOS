@@ -84,7 +84,7 @@ nav a {
 .imgdiv img {
 	margin: 0px auto;
 	height: auto;
-	max-width: 480px;
+	max-width: 90%;
 	display: block;
 }
 .imgcaption {

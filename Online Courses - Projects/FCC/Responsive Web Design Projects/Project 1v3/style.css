@@ -4,7 +4,6 @@
     margin: 0px;
 }
 body {
-    /*background: linear-gradient(darkslategray, dimgray 10%, lightgray);*/
     background: aliceblue;
 }
 .center {
@@ -13,7 +12,7 @@ body {
 #title {
     font-family: "Poppins";
     font-size: 63px;
-    background-color: lightblue;
+    background-color: lightcyan;
     color: rgb(32, 27, 27);
 }
 header h2 {
@@ -27,15 +26,20 @@ nav {
 }
 .navbutton {
     display: inline-block;
+    margin: 0px 10px;
+    color: lightcyan;
+}
+.navbutton a {
+    color: dimgray;
 }
 #imgdiv {
-    background-color: lightgreen;
+    background-color: transparent;
     margin: 0px 80px 50px 80px;
 }
-img {
-    margin: 0px 0px;
+#image {
+    margin: 0px auto;
     display: block;
-    max-width: 73%;
+    max-width: 80%;
     height: auto;
 }
 #img-caption p {
@@ -43,14 +47,19 @@ img {
     font-style: italic;
     padding: 5px;
     text-align: justify;
+    background-color: lightgray;
 }
 #img-caption {
     background: lightgray;
     opacity: 0.76;
+    margin: 0px 120px 0px 80px;
     max-width: 400px;
     min-width: 150px;
-    position: sticky;
-    bottom: 250px;
+    max-height: 300px;
+    position: relative;
+    bottom: 200px;
+    left: 20px;
+    z-index: 20;
 }
 .float-left {
     float: left;
@@ -58,44 +67,10 @@ img {
     color: aliceblue;
 }
 #tribute-info {
-    background: lightgreen;
+    background: transparent;
     margin-bottom: 50px;
-}
-.block-styling {
-    padding: 0px 0px;
-    margin: 0px 80px;
-}
-article p {
-    text-indent: 0px;
-    text-align: justify;
-}
-.block-styling p {
-    text-indent: 0px;
-    text-align: justify;
-    padding: 0px 7px;
-}
-h2 {
-    font-size: 48px;
-}
-h4 {
-    font-style: italic;
-    font-size: 12px;
-}
-.timeline-block {
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:
-    40px auto auto;
-    grid-gap: 25px;
-    align-content: space-between;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-.timeline-head {
-    width: 100%;
-    grid-column: 1 / end;
-    grid-row: 1/2;
+    position: relative;
+    bottom: 120px;
 }
 .heading {
     font-weight: bold;
@@ -110,51 +85,167 @@ h4 {
     padding: 3px 15px 3px 3px;
     margin: 3px 15px 0px 0px;
 }
+.block-styling {
+    padding: 0px 0px;
+    margin: 0px 80px;
+}
+article p {
+    text-indent: 0px;
+    text-align: justify;
+}
+.block-styling p {
+    text-indent: 0px;
+    text-align: justify;
+    padding: 7px 7px;
+}
+h2 {
+    font-size: 48px;
+}
+h4 {
+    font-style: italic;
+    font-size: 12px;
+}
+.timeline-block {
+    background-color: green;
+    position: relative;
+    bottom: 120px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-areas: 
+        "head head head"
+        "before before before"
+        "column1 column2 column3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:
+    40px auto auto;
+    grid-gap: 25px;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.timeline-head {
+    width: 100%;
+    grid-area: head;
+}
 .box-shadow {
     -webkit-box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
     -moz-box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
     box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
 }
-
 .timeline-before {
     width:  100%;
-    grid-column: 1 / end;
-    grid-row: 2 / 3;
+    grid-area: before;
+    background: blue;
 }   
 .timeline-column {
     padding: 0px 0px;
     font-size: 14px;
-    grid-column: ;
-    grid-row: ;
 }
 .timeline-column p {
     margin: 0px 0px;
 }
 #timeline2 {
     background: lightcyan;
-    grid-column: 1/2;
-    grid-row: 3/4;
+    grid-area: column1;
 }
 #timeline3 {
     background: lightgoldenrodyellow;
-    grid-column: 2/3;
-    grid-row: 3/4;
+    grid-area: column2;
 }
 #timeline4 {
-    background: lightskyblue;
-    grid-column: 3/4;
-    grid-row: 3/4;
+    background: lightcyan;
+    grid-area: column3;
 }
-footer {
-    text-align: center;
-    background-color: lightgreen;
+#bio {
+    background: lightgreen;
+    position: relative;
+    bottom: 120px;
+    display: grid;
+    grid-template-areas: 
+        "head head"
+        "portrait top"
+        "portrait middle"
+        "portrait bottom";
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 40px auto auto auto;
+    grid-gap: 25px;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
+#bio-title{
+    grid-area: head;
+}
+#portrait-box {
+    background: lightgoldenrodyellow;
+    grid-area: portrait;
+}
+#portrait {
+    max-width: 80%;
+    height: auto;
+    margin: 0px auto;
+    display: block;
+}
+#quote {
+    grid-area: top;
+    background: lightcyan;
+}
+#quick-facts {
+    grid-area: middle;
+    background: lightpink;
+}
+#achievements {
+    grid-area: bottom;
+    background: lightsalmon
+}
+
+
+
 #tribute-link {
     background: lightgoldenrodyellow;
     text-align: center;
+    padding-bottom: 10px;
     position: relative;
+    bottom: 120px;
 }
 #tribute-link li {
     font-size: 12px;
     display: inline-block;
+}
+footer {
+    text-align: center;
+    background-color: transparent;
+    padding: 14px 0px;
+    font-size: 12px;
+}
+
+
+@media (max-width: 800px) {
+    .timeline-block {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "head"
+            "before"
+            "column1"
+            "column2"
+            "column3";
+        bottom: 0px;
+    }
+    #img-caption {
+        position: relative;
+        display: none;
+    }
+    #tribute-info {
+        bottom: 0px;
+    }
+    #bio {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "head"
+            "portrait"
+            "top"
+            "middle"
+            "bottom";
+        bottom: 0;
+        margin-bottom: 50px;
+    }
 }
