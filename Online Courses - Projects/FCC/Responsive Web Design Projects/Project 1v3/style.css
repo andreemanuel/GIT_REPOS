@@ -34,7 +34,7 @@ nav {
 }
 #imgdiv {
     background-color: transparent;
-    margin: 0px 80px 50px 80px;
+    margin: 0px 120px 50px 120px;
 }
 #image {
     margin: 0px auto;
@@ -82,6 +82,7 @@ nav {
     font-weight: bold;
     background: rgb(32, 27, 27);
     color: aliceblue;
+    max-width: 130px;
     padding: 3px 15px 3px 3px;
     margin: 3px 15px 0px 0px;
 }
@@ -106,7 +107,7 @@ h4 {
     font-size: 12px;
 }
 .timeline-block {
-    background-color: green;
+    background-color: transparent;
     position: relative;
     bottom: 120px;
     margin-bottom: 50px;
@@ -116,14 +117,12 @@ h4 {
         "before before before"
         "column1 column2 column3";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:
-    40px auto auto;
+    grid-template-rows: 40px auto auto;
     grid-gap: 25px;
     align-content: space-between;
     justify-content: space-between;
 }
 .timeline-head {
-    width: 100%;
     grid-area: head;
 }
 .box-shadow {
@@ -132,9 +131,8 @@ h4 {
     box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
 }
 .timeline-before {
-    width:  100%;
     grid-area: before;
-    background: blue;
+    background: transparent;
 }   
 .timeline-column {
     padding: 0px 0px;
@@ -155,10 +153,12 @@ h4 {
     background: lightcyan;
     grid-area: column3;
 }
+
 #bio {
     background: lightgreen;
     position: relative;
     bottom: 120px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-areas: 
         "head head"
@@ -167,10 +167,10 @@ h4 {
         "portrait bottom";
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 40px auto auto auto;
-    grid-gap: 25px;
+    grid-gap: 0px;
     align-content: space-between;
     justify-content: space-between;
-    margin-bottom: 50px;
+    z-index: 0;
 }
 #bio-title{
     grid-area: head;
@@ -237,6 +237,10 @@ footer {
     #tribute-info {
         bottom: 0px;
     }
+    #tribute-link {
+        bottom: 0px;
+    }
+
     #bio {
         grid-template-columns: 1fr;
         grid-template-areas: 
